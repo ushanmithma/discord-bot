@@ -29,6 +29,10 @@ client.on("interactionCreate", (interaction) => {
         interaction.reply("Here your source file")
     }
     
+    if (interaction.commandName == 'hey') {
+        interaction.reply(`Hello, ${interaction.user.globalName} ✌️`)
+    }
+    
     if (interaction.commandName == 'add') {
         const num1 = interaction.options.get('first-number').value
         const num2 = interaction.options.get('second-number').value
