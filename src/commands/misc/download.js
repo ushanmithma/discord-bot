@@ -41,7 +41,7 @@ module.exports = {
 
       interaction.reply({
         embeds: [embed],
-        files: [path.join(__dirname, '../../../', game.file)],
+        files: [path.join(__dirname, './../../../', game.file)],
       })
     } else {
       interaction.reply(
