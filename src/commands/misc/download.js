@@ -1,5 +1,5 @@
 const { ApplicationCommandOptionType } = require('discord.js')
-const games = require('../../../data/games.json')
+const games = require('./../../../data/games.json')
 const path = require('path')
 
 module.exports = {
