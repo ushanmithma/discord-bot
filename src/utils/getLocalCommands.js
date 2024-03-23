@@ -1,7 +1,7 @@
 const path = require('path')
 const getAllFiles = require('./getAllFiles')
 
-function eventHandler(exceptions = []) {
+module.exports = (exceptions = []) => {
   let localCommands = []
 
   const commandCategories = getAllFiles(
@@ -25,5 +25,3 @@ function eventHandler(exceptions = []) {
 
   return localCommands
 }
-
-module.exports = eventHandler

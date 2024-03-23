@@ -3,7 +3,7 @@ const areCommandsDifferent = require('../../utils/areCommandsDifferent')
 const getApplicationCommands = require('../../utils/getApplicationCommands')
 const getLocalCommands = require('../../utils/getLocalCommands')
 
-async function registerCommands(client) {
+module.exports = async (client) => {
   try {
     const localCommands = getLocalCommands()
     const applicationCommands = await getApplicationCommands(client, testServer)
@@ -51,5 +51,3 @@ async function registerCommands(client) {
     console.log(`There was an error: ${error}`)
   }
 }
-
-module.exports = registerCommands
