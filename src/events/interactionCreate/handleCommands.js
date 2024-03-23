@@ -1,7 +1,7 @@
 const { devs, testServer } = require('../../../config.json')
 const getLocalCommands = require('../../utils/getLocalCommands')
 
-module.exports = async (client, interaction) => {
+async function handleCommands(client, interaction) {
   if (!interaction.isChatInputCommand()) return
 
   const localCommands = getLocalCommands()
@@ -64,3 +64,5 @@ module.exports = async (client, interaction) => {
     console.log(`There was an error running this command: ${error}`)
   }
 }
+
+module.exports = handleCommands
